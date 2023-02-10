@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $mainFontFamily;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+
+    padding: 15px;
+}
+
+.container {
+    background-color: #f1f1f1;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.controls {
+    padding: 15px;
+}
+
+.world {
+    padding: 10px;
+}
+
+
+table {
+    background-color: #e2e4e3;
+}
+
+td {
+    border: 1px solid #a9a9a9;
+    width: 10px;
+    height: 10px;
+
+    &.dead {
+        background-color: transparent;
+    }
+
+    &.alive {
+        background-color: #000000;
+    }
+}

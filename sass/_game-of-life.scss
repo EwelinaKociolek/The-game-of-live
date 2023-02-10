@@ -1,0 +1,124 @@
+.header {
+  font-family: $headerFontFamily;
+  display: block;
+  text-align: center;
+
+  &__h1 {
+    margin: 15px auto 5px auto
+  }
+
+  &__description {
+    font-size: small;
+    text-align: justify;
+  }
+
+  @media(max-width:500px){
+    font-size: x-small;
+  }
+}
+
+.controls {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px 10px;
+  @media(max-width:500px) {
+  flex-direction: column;
+}
+
+
+  &__inputs {
+    display: block;
+    display: flex;
+    gap: 15px;
+    margin: 5px;
+    justify-content: space-between;
+
+  @media(max-width:500px){
+    flex-direction: column;
+    align-items: center;
+  }
+
+    input[type="number"] {
+      width: 70px;
+      border-radius: 5px;
+    }
+  }
+
+  &__buttons {
+    display: block;
+    display: flex;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    gap: 5px;
+    align-content: center;
+    justify-content: space-around;
+
+    @media(max-width:500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+.controls__buttons.start-button {
+  background-color: #d8d9da;
+}
+
+.controls__buttons.reset-button {
+  background-color: #d8d9da;
+}
+
+.controls__buttons.random-button {
+  background-color: #d8d9da;
+}
+.controls__buttons.create-button {
+  background-color: #d8d9da;
+}
+}
+
+
+
+.world {
+  display: block;
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  padding: 15px;
+
+  &__table {
+    background-color: #d5d6d6;
+
+    & td {
+      border: 2px solid #8b8b8b;
+      width: 15px;
+      height: 15px;
+
+      &.dead {
+        background-color: transparent;
+      }
+
+      &.alive {
+        background-color: #a40a0a;
+      }
+    }
+  }
+}
+
+td {
+  border: 1px solid #a9a9a9;
+  width: 15px;
+  height: 15px;
+
+  &.dead {
+    background-color: transparent;
+  }
+
+  &.alive {
+    background-color: #000000;
+  }
+}

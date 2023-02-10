@@ -5,20 +5,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The game of live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/sass/main.scss">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-    <div id="world">
-
+  <div class="container">
+    <header class="header">
+      <h1 class="header__h1">The Game Of Life</h1>
+      <h2 class="header__h2">Rules</h2>
+      <ul class="header__description">
+        <li>Any live cell with fewer than two live neighbors dies, as if caused by under-population.</li>
+        <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+        <li>Any live cell with more than three live neighbors dies, as if by overcrowding.</li>
+        <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+      </ul>
+    </header>
+    <div class="controls">
+      <div class="controls__inputs">
+        <label for="rows-input">Number of rows: </label>
+        <input type="number" name="rows" id="rows-input" value="">
+        <label for="cols-input">Number of columns: </label>
+        <input type="number" name="columns" id="cols-input" value="">
+      </div>
+      <div class="controls__buttons">
+        <button class="controls__buttons create-button" id="create-button">Create Board</button>
+        <button class="controls__buttons start-button" id="start-button">Start</button>
+        <button class="controls__buttons reset-button" id="reset-button">Reset</button>
+        <button class="controls__buttons random-button" id="random-button">Random</button>
+      </div>
     </div>
-    <div>
-      <h2>Click on table cells to toggle the cells as alive or dead.</h2>
-      <h3>Click the Start Reproducing button to Start and Stop</h3>
-      <button type='button' id='btnstartstop' value='Start Reproducing'>Start Reproducing</button>
-      <Input type='button' id='btnreset' value='Reset World'/>
+    <div class="world" id="world">
     </div>
-
+  </div>
   <script type="module" src="/main.js"></script>
 </body>
 </html>
