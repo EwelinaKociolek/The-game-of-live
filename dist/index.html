@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The game of live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Condensed:wght@400;700&display=swap"
+    rel="stylesheet">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.3fd025a3.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnAgoSFxjbpVlAAAADCElEQVRIx43VXWjVZRwH8M95mUddbprVIOciCqa0QUl0EaM0uwkGk16E0OpGIfA2iAhCJMLL6C4ahGU0g6DuvDDzQugiKFuZGmb4MnOuza3NvZy3Xxf/c7ad4zmz33Pz8PB7+X5/v+/zPKxsGZmVHVJNwjZ7XI8u7ZhyxW/OuKrkf9gq2w26JC+WrbxLBm236m7h3QZN1oQuX5MGda9Ep9/ZpsHVdVZ/Y+Ipe4xW3R6I7ljbLMWoPY1S9Lux5HQw/o6+5ihu6K+GZRe5H9bBvXqVZMw66VZzsh0Ou+j88s5/kuR+LsbjSszFvhCplXsxmEwkQfC0l5NMJbN+cs4wnrVZUUraqJNK6LXNKZcT15d84ftkm67WF8/H7TgUQmTiq5iPWzEZ03E8ciHE21GOF5djSCcIuuyocimatgDKBp1QsMF+671rTs64N51ZIr7DQ/6CAQvVrDtjOg6FSEe60oPOOBdjMRtjUYy3aruQtytB0LMk0DN26falGa0WFBx0036PeU9BVr52Fi16fJNQWLRx3+m004Q2c/JaXXfabbNKcor14+wiK6u99vRbPyjJKAtXwTkvIO2f+gTtsll3XOmiOWWpCtGkoXNIKzTQVFbZv7VHu3xgQpt5C15xEVsdVdbmsI9rXaeVs8oVnGC9LdYZNl1p4rwWvXptVNRudX35a8pZ/K6gJTnZ5msfGZCWUlIWNjniPm1mrV28OBUrOJuMcdg1D6uwzSsoKUnp06lgo4wRQ+aslveq00uARwwnm5wjK0l5ppmUP5NLECw4ZiAZZsGELd5x3M8+dapyma5XFHDCbb9U6085VlE91vm8KuXJGIl87LvbwxaOarNMA086qpv7PaUoa6tHfbj8xai3C17zY60e9ri5lP/9GI9nmlcfs7d+JKxxwFjVZVM8Eeuahx+wphGsVq+7cFfuf3hDazNmOX2GTDUNnjKkT84KltFhtyGX7/jarjhmt476z7bRH5O1wSN6bfGgezDjuvN+9adbdz4JjX9n0rJyVmtBwbwFReVGjv8BQHz2MGq/Kk4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDItMTBUMTg6MjM6MjQrMDA6MDAEyxW3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTEwVDE4OjIzOjI0KzAwOjAwdZatCwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnAgoSFxjbpVlAAAABSUlEQVQoz1XRv2pTARTH8c9tL0LEdmkwRmLjn3RoiRl0cNBJxEeQxn+D9A004KDYzQfwARykT6DJUkVHl0ZoO7jUagti6aDYoKL39jiES9PfWQ7nL+d7EoUSJ7TU8cWqb8IhlXX07clk9vR1lEfTDT35sTgeCsv1NA66u6WYjXYsHBSE0C2mPJA3423cjzNxJS5HJcRsTIZ9HcZVPXXylDmPNNw0b9qYazZ9T0x5mTpvhl0f3ZB4ruKxO+7agBmtVF2JLUvmHfFVT7hoc7i8pJ5Khn74J5Ej89d+wSZJbfttoqZtV2LguifOWRnO+GV7zJoNKua8sOaWh95bcMlZ+GR13E9TrpaTtgkf7HjnlRU/7PgTnulC1fLRaMXtuHcY1LJqwbLptXwyqqOo32iOfqNm0bqBTGZg3aJacUih1GkXTGNL32fZMPwf4RiC2EQzX6UAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDItMTBUMTg6MjM6MjQrMDA6MDAEyxW3AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTEwVDE4OjIzOjI0KzAwOjAwdZatCwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICAgIm5hbWUiOiAiIiwKICAgICJzaG9ydF9uYW1lIjogIiIsCiAgICAiaWNvbnMiOiBbCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS0xOTJ4MTkyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAic3JjIjogIi9hbmRyb2lkLWNocm9tZS01MTJ4NTEyLnBuZyIsCiAgICAgICAgICAgICJzaXplcyI6ICI1MTJ4NTEyIiwKICAgICAgICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIgogICAgICAgIH0KICAgIF0sCiAgICAidGhlbWVfY29sb3IiOiAiI2ZmZmZmZiIsCiAgICAiYmFja2dyb3VuZF9jb2xvciI6ICIjZmZmZmZmIiwKICAgICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0K">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.f279daf7.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+  <script type="module" crossorigin src="/assets/index.5b2b632a.js"></script>
+  <link rel="stylesheet" href="/assets/index.05534e04.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__h1">The Game Of Life</h1>
+      <h2 class="header__h2">Rules</h2>
+      <ul class="header__description">
+        <li>Any live cell with fewer than two live neighbors dies, as if caused by under-population.</li>
+        <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+        <li>Any live cell with more than three live neighbors dies, as if by overcrowding.</li>
+        <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+      </ul>
+    </header>
+    <div class="controls">
+      <div class="controls__inputs">
+        <label for="rows-input">Number of rows: </label>
+        <input type="number" name="rows" id="rows-input" value="">
+        <label for="cols-input">Number of columns: </label>
+        <input type="number" name="columns" id="cols-input" value="">
+      </div>
+      <div class="controls__buttons">
+        <button class="controls__buttons create-button" id="create-button">Create Board</button>
+        <button class="controls__buttons start-button" id="start-button">Start</button>
+        <button class="controls__buttons reset-button" id="reset-button">Reset</button>
+        <button class="controls__buttons random-button" id="random-button">Random</button>
+      </div>
+    </div>
+    <div class="world" id="world">
+    </div>
+  </div>
+  
+</body>
+</html>
