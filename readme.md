@@ -12,3 +12,4 @@ The Game of Life, also known simply as Life, is a cellular automaton devised by 
 - BEM methodology
 - VITE
 
+Live preview: [click](https://ewelinakociolek.github.io/The-game-of-live/)
